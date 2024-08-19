@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main id="app" className="flex min-h-screen p-4">
+    <main id="app" className="flex min-h-screen p-3">
       <div className="w-[1200px] max-w-[1200px] mx-auto p-3">
         <ProfileHeader />
         <div className="profile pb-8 w-full mt-14 h-fit shadow-sm rounded-md py-3 px-6 flex md:flex-row flex-col gap-2 md:gap-10">
