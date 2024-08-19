@@ -7,7 +7,7 @@ export async function GET(req: Request, context: any) {
 
   if (!params.byAuthor) {
     return NextResponse.json({
-      message: "Invalid Data!",
+      message: "Invalid Data...!",
     });
   }
 
