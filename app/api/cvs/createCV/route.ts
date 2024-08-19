@@ -130,6 +130,7 @@ export async function POST(req: Request) {
     console.error(error);
     return NextResponse.json({
       message: "Error updating or creating resumes.",
+      cause: error
     });
   }
 }
