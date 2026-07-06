@@ -1,8 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Resume Builder
+
+A modern, responsive Resume Builder application built with **Next.js**, **React**, **Tailwind CSS**, and **Zustand** for state management. It allows users to easily craft professional resumes with a live PDF preview, multiple templates, and dynamic customization options.
+
+## Features
+
+- **Live PDF Preview:** Instantly see how your resume looks as you type, powered by `@react-pdf/renderer` and `react-pdf`.
+- **Modern UI:** Built with Tailwind CSS, featuring a clean, responsive layout that works seamlessly across desktop and mobile devices.
+- **State Management:** Utilizes Zustand for fast, lightweight, and reliable state management across the application.
+- **Customizable Templates:** Switch between different professional templates and customize colors and font sizes.
+- **Double-Buffered Rendering:** Employs an advanced double-layer rendering technique to eliminate flickering and provide smooth transitions during live PDF updates.
+- **Responsive Design:** A specialized mobile preview and a fully optimized editor layout for all screen sizes.
+
+## Tech Stack
+
+- **Framework:** [Next.js 14](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **State Management:** [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- **PDF Generation:** [@react-pdf/renderer](https://react-pdf.org/) & [react-pdf](https://projects.wojtekmaj.pl/react-pdf/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have Node.js and npm (or yarn/pnpm) installed on your machine.
+
+### Installation
+
+1. Clone the repository and navigate into the project directory.
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### Running the Development Server
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -12,23 +50,16 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application in action.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `app/` - Next.js App Router configuration and main pages.
+- `components/` - Reusable UI components including the Editor, Preview, and PDF Templates.
+  - `components/editor/` - Contains the main logic for editing sections (Work Experience, Education, Skills, etc.) and the Live Preview panes (`ResumePreview.tsx` & `MobileResumePreview.tsx`).
+  - `components/profile/` - Profile management and resume dashboard components.
+- `lib/store/` - Zustand store setup (`useResumeStore.ts`).
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
